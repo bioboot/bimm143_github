@@ -1,7 +1,7 @@
 ---
 title: "Class17: Mini Project"
 author: "Barry (PID 911)"
-format: html
+format: gfm
 ---
 
 The goal of this hands-on mini-project is to examine and compare the Covid-19 vaccination rates around San Diego.
@@ -304,6 +304,17 @@ x$percent_of_population_fully_vaccinated
 
 > Q20. Finally make a time course plot of vaccination progress for all areas in the full dataset with a age5_plus_population > 36144.
 
+```{r}
+vax.36.all <- filter(vax, age5_plus_population > 36144)
+
+
+ggplot(vax.36.all) +
+  aes(as_of_date,
+      percent_of_population_fully_vaccinated, 
+      group=zip_code_tabulation_area) +
+  geom_line(alpha=0.2, col="blue") +
+  geom_hline(yintercept = ave, linetype=2)
+```
 
 
 
