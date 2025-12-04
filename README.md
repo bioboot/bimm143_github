@@ -1,7 +1,7 @@
 # BIMM143
 Classwork for [BIMM143 at UC San Diego](https://bioboot.github.io/bimm143_F25/) during Fall 2025.
 
-- Class 04 [R fundamentals]()
+- Class 04 [R fundamentals](class04/class04.md)
 
 - Class 05 [Data Viz with ggplot](class05/class05.md)
 
@@ -15,20 +15,20 @@ Classwork for [BIMM143 at UC San Diego](https://bioboot.github.io/bimm143_F25/) 
 
 - Class 10 [Haloween Candy Project](class10/class10.md)
 
-- Class 11 [Structural Bioinformatics (pt2 AlphaFold)]()
+- Class 11 [Structural Bioinformatics (pt2 AlphaFold)](class11/class11.md)
 
-- Class 12 [Transcriptomics, RNA-Seq analysis]()
+- Class 12 [Transcriptomics, RNA-Seq analysis](class12/class12.md)
 
 - Class 13 Veterans Day Holiday
 
-- Class 14 [RNA-Seq mini project]()
+- Class 14 [RNA-Seq mini project](class14/class14.md)
 
-- Class 15 [Hands-on with Git and GitHub]()
+- Class 15 [Hands-on with Git and GitHub](class15/class15.md)
 
-- Class 16 [Essential UNIX for bioinformatics]()
+- Class 16 [Essential UNIX for bioinformatics](class16/class16.md)
 
-- Class 17 [Genome informatics and high throughput sequencing]()
+- Class 17 [Genome informatics and high throughput sequencing](class17/class17.md)
 
 - Class 18 Thanksgiving Holiday
 
-- Class 19 [Investigating pertussis resurgence mini project]()
+- Class 19 [Investigating pertussis resurgence mini project](class19/class19.md)
