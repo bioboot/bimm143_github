@@ -15,5 +15,20 @@ Classwork for [BIMM143 at UC San Diego](https://bioboot.github.io/bimm143_F25/) 
 
 - Class 10 [Haloween Candy Project](class10/class10.md)
 
-- Class 11 [Something else]()
-- 
+- Class 11 [Structural Bioinformatics (pt2 AlphaFold)]()
+
+- Class 12 [Transcriptomics, RNA-Seq analysis]()
+
+- Class 13 Veterans Day Holiday
+
+- Class 14 [RNA-Seq mini project]()
+
+- Class 15 [Hands-on with Git and GitHub]()
+
+- Class 16 [Essential UNIX for bioinformatics]()
+
+- Class 17 [Genome informatics and high throughput sequencing]()
+
+- Class 18 Thanksgiving Holiday
+
+- Class 19 [Investigating pertussis resurgence mini project]()
