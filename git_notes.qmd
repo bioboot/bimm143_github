@@ -24,7 +24,7 @@ The core steps to using git involve
     
 4. Commit your staged files to the repository
     In RStudio you just hit the "Commit" button and add a msg
-    `git commit -m "your wee msg`
+    `git commit -m "your wee msg"`
     
 
 5. Git Push to sync changes TO GitHub
