@@ -18,7 +18,7 @@ The core steps to using git involve
     Add files
     Modify files etc.
 
-3. Add your important files to the "stage"
+3. Add your important files to the git "stage"
     In RStudio we click "staged" radio button
     `git add yourfilename`
     
@@ -27,11 +27,11 @@ The core steps to using git involve
     `git commit -m "your wee msg"`
     
 
-5. Git Push to sync changes TO GitHub
+5. Git Push to sync changes *TO* GitHub
     The Up arrow in RStudio
     `git push`
     
-6. Git Pull to sync FROM GitHub
+6. Git Pull to sync *FROM* GitHub
     THe Down arrow in RStudio
     `git pull`
     
