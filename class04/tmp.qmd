@@ -1,0 +1,68 @@
+---
+title: "Untitled"
+format:
+  pdf:
+    pdf-standard: ua-2
+---
+
+Markdown allows you to format text with *emphasis* and **strong emphasis**. 
+
+You can also add superscripts^2^, subscripts~2~, and display code `verbatim`. 
+
+Little known fact: you can also ~~strikethrough~~ text and present it in [small caps]{.smallcaps}. 
+
+There is also [highlighted text]{.mark} and [Underlined Text]{.underline}.
+
+For Creating accessible PDFs you still need Alt text for every image, specified with `fig-alt`.
+
+```
+![](elephant.png){fig-alt="A drawing of an elephant."}
+
+# or multiple params
+![](elephant.png){fig-alt="A drawing of an elephant." fig-align="left" width=20%}
+```
+
+To render the caption instead as alt text you can append a backslash to the line as detailed in the Pandoc documentation:
+
+```
+![A drawing of an elephant.](elephant.png)\
+```
+## Only work for HTML
+For red text with yellow highlight: [red and yellow]{style="color: red; background-color: yellow;"}.
+
+You can create custom classes or use Bootstrap classes (if rendering to HTML) to style text: 
+
+- Text Colors (HTML): [Text in red]{.text-danger} or [Text in blue]{.text-primary}.
+- Background Colors (HTML): [Highlighted]{.bg-warning}.
+- Custom Class: [Custom text]{.my-custom-class} (Requires defining .my-custom-class in a custom CSS file). 
+
+
+
+
+
+## Pandoc's Fenced Code Block
+Sandwich the code between "fences" of at least three backticks! An optional language provides syntax highlighting.
+
+```r
+x <- c(1,100,10)
+library(ggplot2)
+plot(x, col="red")
+```
+
+Useful for displaying source code, not running it
+Note that the language is not in { }
+
+
+Block Elements: Lists (example lists)
+The first list item with a @ marker will be numbered 1., the next 2., etc. The numbered examples need not occur in a single list; each new list using @ will take up where the last stopped. - the Pandoc Docs
+
+(@) The first example.
+(@) The second example.
+
+Explanation of examples.
+
+(@) The third example.
+
+You can also label your examples: (@goodname).
+
+![A figure about fenced div](~/Desktop/quarto_md_tips/Screenshot.png)\
