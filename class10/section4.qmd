@@ -1,0 +1,98 @@
+---
+title: "Bio3D intro"
+author: "barry"
+format: html
+---
+
+
+# Getting started with Bio3D
+
+Bio3D is an R package for structural bioinformatics available on CRAN
+
+We will also use a couple of other R packages from GitHub and bioconductor in this lab.
+
+
+## Setup some needed packages
+
+```r
+# Pak can install from multiple sources
+install.packages("pak")
+
+pak::pkg_install( c("bioboot/bio3dview", # GitHub
+                    "NGLVieweR",         # CRAN
+                    "bioc::msa") )       # Bioconductor
+```
+
+## Reading PDB file data into R
+
+
+```{r}
+library(bio3d)
+
+pdb <- read.pdb("1hsg")
+```
+
+The returned `pdb` object is a list with all the key structural information now accessible in R:
+
+```{r}
+head(pdb$atom)
+```
+
+There are many functions that work on these `pdb` objects, e.g.
+
+```{r}
+head( pdbseq(pdb) )
+```
+
+Let's try a new (not on CRAN yet) package for quick interactive structure viewing:
+
+```{r}
+library(bio3dview)
+
+view.pdb(pdb)
+```
+```{r}
+library(NGLVieweR)
+
+view.pdb(pdb, 
+         colorScheme = "sse", 
+         backgroundColor = "black") |>
+  setRock()
+```
+ > Q. Can you make a highly cusom interactive view of this HIV-Pr structure highligthing the active site ASP residues (`resno=25`), the drug/ligand, the two chains in your choice of colors, along with a custom background color?
+
+```{r}
+#| eval: !expr knitr::is_html_output()
+
+
+active.site <- atom.select(pdb, resno=25)
+
+view.pdb(pdb, 
+         highlight = active.site, 
+         highlight.style = "spacefill",
+         cols=c("orange","teal"), 
+         backgroundColor = "pink")
+```
+
+## Prediction of flexiblity
+
+In addition to viewing and storing structure data we can do various bioinformatics calculations such as a NMA to predict flexiblity and inernal dynamics:
+
+```{r}
+adk <- read.pdb("6s36")
+adk
+```
+
+```{r}
+m <- nma(adk)
+plot(m)
+```
+
+```{r}
+view.nma(m)
+```
+
+```{r}
+mktrj(m, file="nma.pdb")
+```
+
